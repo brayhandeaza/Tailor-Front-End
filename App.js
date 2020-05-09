@@ -1,19 +1,23 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React,{ Fragment } from 'react';
+import { Scene, Router} from 'react-native-router-flux'
+
+import Home from './src/Views/Home.View'
+import Footer from './src/components/Footer'
+
+
+
+
+
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-    </View>
-  );
+    <Fragment>
+        <Router>
+          <Scene tabs hideTabBar key="root">
+            <Scene modal key="Home" component={Home} hideNavBar gestureEnable={false} initial/>
+          </Scene>
+        </Router>
+    </Fragment>
+  )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
