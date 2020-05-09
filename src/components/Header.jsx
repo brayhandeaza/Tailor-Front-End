@@ -12,7 +12,7 @@ class Header extends Component {
         return ( 
             <View style={styles.Header}>
                 <TouchableHighlight style={styles.Touchable} >
-                    <Image style={styles.Icons} source={Icons.Header.Logo} />
+                    <Image style={styles.Icons} source={Icons.Views[0]} />
                 </TouchableHighlight>
                 <TouchableHighlight style={styles.Touchable} >
                     <Image style={styles.Icons, {width: 25, height: 25}} source={Icons.Header.More} />
@@ -30,6 +30,8 @@ const styles = StyleSheet.create({
         paddingLeft: 20,
         paddingRight: 20,
         paddingBottom: 10,
+        position: "absolute",
+        top: 0,
 
         display: "flex",
         flexDirection: "row",
@@ -45,8 +47,8 @@ const styles = StyleSheet.create({
         alignItems: "center"
     },
     Icons: {
-        width: 45,
-        height: 45,
+        width: 40,
+        height: 40,
         shadowColor: "#000",
         shadowOffset: {
             width: 0,

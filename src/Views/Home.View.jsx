@@ -16,14 +16,15 @@ class Home extends Component {
         
     }
 
-    handleTailorIndex = () => {
+    handleTailorIndex = () => { 
         setInterval(() => {
             this.setState({
-                index: this.state.index < 3 ? this.state.index + 1 : 0
+                index: this.state.index < 1 ? this.state.index + 1 : 0
             })
-        },1000)
+        },100)
     }
     componentDidMount() {
+        
         this.handleTailorIndex()
     }
     render() { 
@@ -36,10 +37,10 @@ class Home extends Component {
                         <Image style={styles.Icons} source={Icons.Views[this.state.index]} />
                     </TouchableHighlight>
                     <View style={{padding: 10}}>
-                        <Text>You’re one of a kind, so why shouldn’t your clothes be?</Text>
+                        {/* <Text>You’re one of a kind, so why shouldn’t your clothes be?</Text> */}
                     </View>
                     <TouchableHighlight style={styles.GetTailor} underlayColor="#f6f6f6" onPress={() =>{}}>
-                        <Text style={{color: "green", fontSize: 20}} >Get a tailor now</Text>
+                        <Text style={{color: "green", fontSize: 20, fontWeight: "bold"}} >Get a tailor now</Text>
                     </TouchableHighlight>
                 </View>
                 <Footer/>
